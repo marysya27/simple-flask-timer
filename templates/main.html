@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}"> 
+        <link rel="shortcut icon" href="{{ url_for('static', filename='image/cube-fill-svgrepo-com.ico')}}">
+        <title>Timer</title>
+    </head>
+    <body>
+        <header>
+            <span class="header-name">Flask Rubik's Cube Speedsolving</span>
+            <a class="header-logout" href="{{url_for('logout')}}">Logout<svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4" stroke="#ffa500" stroke-width="1.5" stroke-linecap="round"></path> <path d="M10 12H20M20 12L17 9M20 12L17 15" stroke="#ffa500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></a>
+        </header>
+        
+        
+        <div class="full-timer">
+            <div class="left-sidebar">
+                <div class="average-best-time">
+                    <span>Best: <span id="best-time">-</span></span>
+                    <span>Average: <span id="full-average-time">-</span></span>
+                    <span>Average last 5: <span id="average-time-5">-</span></span>
+                    <span>Average last 10: <span id="average-time-10">-</span></span>
+                </div>
+                <div class="container">
+                    <div id="results" class="container-results" >
+                        {% if arr_current_time %}
+                            {% for i in arr_current_time %}
+                                {{ i | safe }} <br>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+                <button onclick="deleteLast()" id='delete-button'>Delete</button>
+            </div>
+            <div class="container-timer">
+                <div id="scramble" class="container-scramble">
+                    {% if scramble %}
+                        {% for i in scramble %}
+                            <span>{{ i }}</span>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                <div class="time-now">
+                    <span  id="timer" >00:00</span>
+                    <span id="difference"></span>
+                </div>
+            </div>
+        </div>
+        
+        
+        <button id="startStop" onclick="startStop()" style="display: none;">start</button>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+
+</body>
+</html>

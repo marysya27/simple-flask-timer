@@ -1,0 +1,189 @@
+html, body { 
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2c156a;
+    font-family: math;
+}
+
+.login-form {
+    width: 700px;
+    height: 400px;
+    background-color: #ff8d00;
+    border-radius: 5px;
+    left: 50%;
+    top: 50%;
+    position: relative;
+    transform: translate(-50%, -50%);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.form-input-name {
+    height: 50px;
+    width: 370px;
+    font-size: 30px;
+    background-color: rgb(255, 255, 255);
+    border: 4px solid #2c156a;
+    top: 50px;
+    position: relative;
+    font-family: math;
+}
+
+.form-input-button {
+    border: none;
+    background-color: #2c156a;
+    color: white;
+    font-size: 25px;
+    padding: 5px 50px;
+    border-radius: 5px;
+    position: relative;
+    top: -65px;
+    font-family: math;
+}
+
+header {
+    height: 60px;
+    background-color: #ff8d00;
+}
+
+.header-name {
+    font-size: 23px;
+    font-weight: bold;
+    color: #2c156a;
+    margin: 18px;
+    position: absolute;
+}
+
+.header-logout {
+    text-decoration: none;
+    font-size: 20px;
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    display: flex;
+    align-items: center;
+    color: #ff8d00;
+    background-color: #2c156a;
+    padding: 4px 7px;
+    border-radius: 8px;
+    gap: 5px;
+}
+
+.container-scramble {
+    color: #ff8d00;
+    height: 40px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.container-timer {
+    font-size: 185px;
+    color: white;
+}
+
+.time-now {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 70px);
+    font-family: monospace;
+}
+
+#difference {
+    /* color: white; */
+    font-size: 20px;
+    position: relative;
+    top: 55px;
+}
+
+
+.full-timer {
+    display: flex;
+    height: calc(100% - 60px);
+}
+
+.container-timer {
+    width: 100%;
+}
+
+.left-sidebar {
+    color: #2c156a;
+    border-top: 2px solid #2c156a;
+    width: 350px;
+    background-color: #ff8d00;
+}
+
+.average-best-time {
+    display: grid;
+    gap: 4px;
+    font-size: 23px;
+    margin: 10px;
+}
+
+.container {
+    height: 70%; /* Фіксована висота контейнера */
+    overflow-y: auto; /* Додати полосу прокрутки по вертикалі, якщо контент перевищує висоту */
+    margin: 10px;
+}
+  
+.container-results {
+    padding: 10px;
+    background-color: #2c156a;
+    color: #ff8d00;
+    font-size: 25px;
+    font-family: monospace;
+} 
+
+.each-time {
+    border: 1px solid #ff8d00;
+    padding-left: 8px;
+    display: inline-flex;
+    width: 200px;
+}
+
+.each-time-count {
+    color: white;
+    font-size: 20px;
+    top: 4px;
+    position: relative;
+}
+
+.container::-webkit-scrollbar {
+    width: 10px; /* Ширина полоси прокрутки */
+    
+}
+
+.container::-webkit-scrollbar-track {
+    background: #2c156a; /* Колір фону треку */
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: white; /* Колір полоси прокрутки */
+    /* border-radius: 0 5px 5px 0;    Радіус кутів полоси прокрутки */
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Колір полоси прокрутки при наведенні миші */
+}
+  
+
+#delete-button {
+    border: none;
+    font-size: 20px;
+    color: #ff8d00;
+    background-color: #2c156a;
+    padding: 4px 12px;
+    border-radius: 8px;
+    position: relative;
+    left: 10px;
+}
+
